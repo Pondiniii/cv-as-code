@@ -1,0 +1,7 @@
+% Certifications
+\section{Certifications}
+
+<BLOCK> for cert in certifications </BLOCK>
+{\fontsize{10.5}{12.8}\selectfont\color{textprimary}\textbf{<VAR>cert.name</VAR>} — <VAR>cert.full_name</VAR>}\hfill{\fontsize{10.5}{12.8}\selectfont\color{textsecondary}<VAR>cert.year</VAR>}\par
+<BLOCK> if not loop.last </BLOCK>\vspace{0.2em}<BLOCK> endif </BLOCK>
+<BLOCK> endfor </BLOCK>

@@ -1,0 +1,13 @@
+% Projects
+\section{Selected Projects}
+
+<BLOCK> for proj in projects </BLOCK>
+{\fontsize{10.5}{12.8}\selectfont
+\noindent\href{https://<VAR>proj.repo</VAR>}{\textcolor{textprimary}{\textbf{<VAR>proj.name</VAR>}}} \textcolor{textsecondary}{(<VAR>proj.tech</VAR>)} — \textcolor{textsecondary}{\href{https://<VAR>proj.repo</VAR>}{<VAR>proj.repo</VAR>}}\par
+\begin{itemize}[leftmargin=1.8em,itemsep=0.1em,topsep=0.15em]
+<BLOCK> for bullet in proj.bullets </BLOCK>
+  \item {\fontsize{10.5}{12.8}\selectfont\color{textprimary} <VAR>bullet | bold</VAR>}
+<BLOCK> endfor </BLOCK>
+\end{itemize}}
+\vspace{0.25em}
+<BLOCK> endfor </BLOCK>

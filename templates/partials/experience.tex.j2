@@ -1,0 +1,24 @@
+% Experience
+\section{Experience}
+
+<BLOCK> for job in experience </BLOCK>
+\noindent
+{\fontsize{10.8}{12.8}\selectfont\bfseries\color{textprimary} <VAR>job.role</VAR>} {\fontsize{10.5}{12.5}\selectfont\color{textsecondary}— <VAR>job.company</VAR>
+<BLOCK> if job.company_meta </BLOCK>
+  {\fontsize{10.5}{12.5}\selectfont\color{textsecondary} (
+  <BLOCK> if job.company_meta_url </BLOCK>
+    \href{<VAR>job.company_meta_url</VAR>}{\textcolor{textsecondary}{<VAR>job.company_meta</VAR>}}
+  <BLOCK> else </BLOCK>
+    <VAR>job.company_meta</VAR>
+  <BLOCK> endif </BLOCK>
+  )}
+<BLOCK> endif </BLOCK>
+}\hfill{\color{textsecondary}\fontsize{10.5}{12.5}\selectfont <VAR>job.period</VAR>}
+\vspace{0.1em}
+\begin{itemize}
+<BLOCK> for item in job.achievements </BLOCK>
+\item {\fontsize{10.5}{12.8}\selectfont\color{textprimary} <VAR>item | bold</VAR>}
+<BLOCK> endfor </BLOCK>
+\end{itemize}
+\vspace{0.15em}
+<BLOCK> endfor </BLOCK>

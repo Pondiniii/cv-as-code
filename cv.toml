@@ -1,0 +1,81 @@
+name = "Avery Cole"
+tagline = "Senior LLM / AI Engineer"
+email = "avery.cole@example.com"
+phone = "+48 555 012 345"
+location = "Warsaw, Poland"
+github = "https://github.com/fake-axion-labs"
+blog = "https://example.ai"
+summary = "Senior LLM / AI Engineer designing production-grade agentic orchestrators with deterministic tests, guardrails, and full telemetry. I build pipelines achieving 70%+ autonomy, 90%+ tool-success, and >50% TT-PR reduction at <$0.40 per task. Rust/Python, sandboxing, offline/online evals, end-to-end observability."
+output = "release-sample-cv.pdf"
+
+[[experience]]
+role = "Senior LLM Engineer"
+company = "Neural Forge"
+period = "2023 – Present"
+achievements = [
+  "Designed orchestrator + validator + executor covering 240+ processes, reaching **72%** autonomy and **58%** fewer manual interventions",
+  "Built sandboxed MCP tool servers (git/fs/http/k8s) in Rust: **93%** tool-success, 220 ms avg action time",
+  "Created an evaluation framework (350 scenarios) with live metrics: TT-PR **−51%**, cost/task **−37%**",
+  "Deployed OPA/PII guardrails, token control, and action auditing: 0 incidents, MTTR **5 min**",
+  "Rolled out hybrid on-prem + cloud orchestration with complete observability (deployment tempo **2×** faster)"
+]
+
+[[experience]]
+role = "Platform / AI Ops Lead"
+company = "Orion Systems"
+period = "2020 – 2023"
+achievements = [
+  "Replaced mutable images with a Signed-SBOM + Secure Boot pipeline, reducing MTTR by **42%**",
+  "Delivered deterministic CI/CD for models and inference services: deploy time **−78%**, reproducible cached builds",
+  "Implemented policy-as-code (OPA), review gates, and drift detection – change-fail rate **−35%**",
+  "Authored runbooks and incident workflow; maintained **99.98%** SLO for critical services"
+]
+
+[[projects]]
+name = "mcp-git-ops"
+tech = "Rust"
+repo = "github.com/fake-axion-labs/mcp-git-ops"
+bullets = [
+  "Agent→PR automation for PR-ready diffs.",
+  "merge-rate **74%**, autonomy **68%**, tool-success **92%**, TT-PR **−52%**."
+]
+
+[[projects]]
+name = "agent-runner"
+tech = "Rust/Python"
+repo = "github.com/fake-axion-labs/agent-runner"
+bullets = [
+  "Long-running agent sessions with watchdog and replay.",
+  "Infinite loops, fragile recovery, missing telemetry.",
+]
+
+[[tech_stack]]
+category = "Agentic"
+tools = "MCP servers, orchestrator, validator, executor, memory hierarchy, eval harness"
+
+[[tech_stack]]
+category = "Languages"
+tools = "Rust, Python, Bash"
+
+[[tech_stack]]
+category = "Platform"
+tools = "Docker/Podman, Kubernetes, GitHub Actions, SBOM, Cosign/Sigstore"
+
+[[tech_stack]]
+category = "Models"
+tools = "o1/Claude/Qwen (reasoning), llama\\.cpp (local), speculative decoding"
+
+[[tech_stack]]
+category = "Observability"
+tools = "Structured logging, tracing, metrics, labeled error datasets"
+
+[[certifications]]
+name = "AWS MLS"
+full_name = "AWS Certified Machine Learning – Specialty"
+year = 2023
+
+[[certifications]]
+name = "TF Developer"
+full_name = "TensorFlow Developer Certificate"
+year = 2022
+

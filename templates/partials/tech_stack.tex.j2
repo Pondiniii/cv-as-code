@@ -1,0 +1,11 @@
+% Tech Stack
+\section{Tech Stack}
+
+\begingroup\sloppy
+<BLOCK> for cat in tech_stack </BLOCK>
+{\hangindent=2.8cm\hangafter=1
+\noindent{\fontsize{10.5}{12.8}\selectfont\color{textprimary}\textbf{<VAR>cat.category</VAR>}: <VAR>cat.tools | pipes</VAR>}}\par
+<BLOCK> if not loop.last </BLOCK>\vspace{0.2em}
+<BLOCK> endif </BLOCK>
+<BLOCK> endfor </BLOCK>
+\endgroup

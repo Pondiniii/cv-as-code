@@ -1,0 +1,84 @@
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage{fontspec}
+\usepackage[top=1.7cm,bottom=1.7cm,left=1.8cm,right=1.8cm]{geometry}
+\usepackage{polyglossia}
+\setmainlanguage{polish}
+\usepackage[final]{microtype}
+\usepackage{enumitem}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[compact]{titlesec}
+
+% Fonts
+\setmainfont{Inter}[
+  UprightFont=*-Regular,
+  BoldFont=*-Medium,
+  BoldItalicFont=*-MediumItalic,
+  ItalicFont=*-Italic,
+  Scale=0.96
+]
+
+% Colors
+\definecolor{textprimary}{HTML}{222222}
+\definecolor{textsecondary}{HTML}{666666}
+\definecolor{divider}{HTML}{E5E7EB}
+\definecolor{accent}{HTML}{2563EB}
+
+% Hyperref
+\hypersetup{
+  colorlinks=true,
+  linkcolor=textsecondary,
+  urlcolor=textsecondary,
+  pdfborder={0 0 0},
+  pdftitle={CV — Jakub Pondo},
+  pdfauthor={Jakub Pondo}
+}
+\urlstyle{same}
+
+% URL breaking (after hyperref)
+\expandafter\def\expandafter\UrlBreaks\expandafter{\UrlBreaks
+  \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j
+  \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t
+  \do\u\do\v\do\w\do\x\do\y\do\z\do\/\do\-\do\_}
+\Urlmuskip=0mu plus 1mu\relax
+
+% Spacing and penalties
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\linespread{1.02}
+\raggedbottom
+\setcounter{secnumdepth}{0}
+\clubpenalty=10000
+\widowpenalty=10000
+\brokenpenalty=10000
+\frenchspacing
+\emergencystretch=3em
+
+% Section formatting
+\titleformat{\section}
+  {\color{accent}\fontsize{12.5}{14.5}\bfseries}
+  {}{0em}{}
+  [\vspace{-0.1em}{\color{divider}\titlerule[0.7pt]}\vspace{0.15em}]
+\titlespacing*{\section}{0pt}{0.6em}{0.3em}
+\titlespacing*{\subsection}{0pt}{0.5em}{0.25em}
+
+% Lists - global with readable bullets (black for ATS)
+\setlist{nosep,leftmargin=*,itemsep=0.2em,topsep=0.2em}
+\renewcommand\labelitemi{{\color{textprimary}\footnotesize\textbullet}}
+
+% No page numbers
+\pagestyle{empty}
+
+\begin{document}
+
+<BLOCK> include 'partials/header.tex.j2' </BLOCK>
+<BLOCK> include 'partials/summary.tex.j2' </BLOCK>
+<BLOCK> include 'partials/experience.tex.j2' </BLOCK>
+<BLOCK> include 'partials/projects.tex.j2' </BLOCK>
+<BLOCK> include 'partials/tech_stack.tex.j2' </BLOCK>
+<BLOCK> include 'partials/certifications.tex.j2' </BLOCK>
+
+\end{document}
